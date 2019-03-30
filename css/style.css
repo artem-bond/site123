@@ -399,4 +399,20 @@ input[type="checkbox"]:checked + label:before {
     margin-bottom: 20px;
   }
 }
+
+.features-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.features-block_item {
+  -ms-flex-preferred-size: 33.33%;
+      flex-basis: 33.33%;
+}
 /*# sourceMappingURL=style.css.map */

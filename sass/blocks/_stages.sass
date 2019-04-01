@@ -1,0 +1,36 @@
+.stage
+    position: relative
+    text-align: center
+    &_title
+        font-size: 18px
+    &:last-child
+        &:before
+            display: none
+    &:before
+        content: ''
+        width: 70px
+        height: 2px
+        background-color: rgba(#7e7b78,0.9)
+        display: block
+        position: absolute
+        top: 25%
+        right: -60%
+    &_text
+        max-width: 160px
+        margin: auto
+        margin-bottom: 30px
+    &s
+        background-color: #f1f1f1
+        &-block
+            display: flex
+            justify-content: space-between
+            align-items: center
+            flex-wrap: wrap
+@media (max-width: 991px)
+    .stage
+        width: 33%
+        &:before
+            display: none
+@media (max-width: 768px)
+    .stage
+        width: 100%

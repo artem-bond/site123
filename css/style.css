@@ -717,7 +717,7 @@ input[type="checkbox"]:checked + label:before {
   bottom: -80px;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1199px) {
   .price-block {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -725,6 +725,75 @@ input[type="checkbox"]:checked + label:before {
   }
   .price-block_card {
     margin: 20px;
+  }
+}
+
+@media (max-width: 400px) {
+  .price-block_card {
+    margin: 10px;
+  }
+}
+
+.stage {
+  position: relative;
+  text-align: center;
+}
+
+.stage_title {
+  font-size: 18px;
+}
+
+.stage:last-child:before {
+  display: none;
+}
+
+.stage:before {
+  content: '';
+  width: 70px;
+  height: 2px;
+  background-color: rgba(126, 123, 120, 0.9);
+  display: block;
+  position: absolute;
+  top: 25%;
+  right: -60%;
+}
+
+.stage_text {
+  max-width: 160px;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+.stages {
+  background-color: #f1f1f1;
+}
+
+.stages-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media (max-width: 991px) {
+  .stage {
+    width: 33%;
+  }
+  .stage:before {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .stage {
+    width: 100%;
   }
 }
 /*# sourceMappingURL=style.css.map */

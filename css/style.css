@@ -898,4 +898,50 @@ input[type="checkbox"]:checked + label:before {
 .factory-block_image {
   margin: 20px 0;
 }
+
+.contacts {
+  background-color: #f6f7f9;
+}
+
+.contacts-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.contacts-block_item {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.contacts_fa {
+  margin-bottom: 25px;
+  font-size: 26px;
+}
+
+.contacts_text {
+  font-size: 16px;
+}
+
+.contacts_link {
+  text-decoration: none;
+  color: #262626;
+}
+
+.contacts_address {
+  font-style: normal;
+}
+
+@media (max-width: 768px) {
+  .contacts-block_item {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    margin-bottom: 30px;
+  }
+}
 /*# sourceMappingURL=style.css.map */

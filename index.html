@@ -670,10 +670,61 @@
             <!-- /.container -->
         </section>
         <!-- /.section contacts -->
+        <div class="map" id="map">
+
+        </div>
+        <style>
+            #map{
+            height:400px;
+            width:100%;
+            }
+        </style>
     </main>
 
     <!-- feedback vidget -->
     <script type="text/javascript" src="https://spikmi.com/Widget?Id=565"></script>
+
+    <!-- <script>
+        function initMap() {
+  // The location of place
+  var place = {lat: 25.344, lng: -18.000};
+  // The map, centered at place
+  var map = new google.maps.Map(
+      document.getElementById('map'), {zoom: 8, center: place});
+  // The marker, positioned at place
+  var marker = new google.maps.Marker({position: place, map: map, title: 'Position One'});
+}
+    </script> -->
+
+    <script>
+            function initMap() {
+                var mapOptions = {
+                    zoom: 10,
+                    center: new google.maps.LatLng(37.8199, -122.4783),
+                    mapTypeId: 'hybrid'
+                };
+                var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+    
+                var goldenGatePosition = {lat: 37.8199,lng: -122.4783};
+                var marker = new google.maps.Marker({
+                    position: goldenGatePosition,
+                    map: map,
+                    title: 'Golden Gate Bridge'
+            });
+                var contentString = 'Content One';
+    
+                var infowindow = new google.maps.InfoWindow({
+                    content: contentString
+                });
+    
+                marker.addListener('click', function() {
+                    infowindow.open(map, marker);
+                });
+            }
+        </script>
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtCvc-dHxsnqIQDhLoT2n_qPycYMNkqcQ&callback=initMap">
+</script>
 </body>
 
 </html>

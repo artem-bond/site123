@@ -1,7 +1,8 @@
 
 
 @font-face {
-	font-family: 'Proxima Nova Semibold';
+    font-family: 'Proxima Nova Semibold';
+    font-display: swap;
 	src: url('../fonts/ProximaNova-Semibold.eot');
 	src: local('../fonts/Proxima Nova Semibold'), local('ProximaNova-Semibold'),
 		url('../fonts/ProximaNova-Semibold.eot?#iefix') format('embedded-opentype'),
@@ -13,6 +14,7 @@
 
 @font-face {
     font-family: 'Proxima Nova Light';
+    font-display: swap;
     src: url('../fonts/ProximaNova-Light.eot');
     src: url('../fonts/ProximaNova-Light.eot?#iefix') format('embedded-opentype'),
     url('../fonts/ProximaNova-Light.woff') format('woff'),

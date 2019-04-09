@@ -31,4 +31,38 @@ $(window).load(function() {
         return false;
     });
     $('input[type="tel"]').mask("+7 (999) 999-99-99")
+    //map
+    var reviews = $('.reviews');
+    var reviewsTop = reviews.offset().top;
+    $(window).bind('scroll', function(){
+        var windowTop = $(this).scrollTop();
+        if (windowTop > reviewsTop) {
+            $('#map').html(function initMap() {
+                var mapOptions = {
+                    zoom: 10,
+                    center: new google.maps.LatLng(37.8199, -122.4783),
+                    mapTypeId: 'hybrid'
+                };
+                var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+    
+                var goldenGatePosition = {lat: 37.8199,lng: -122.4783};
+                var marker = new google.maps.Marker({
+                    position: goldenGatePosition,
+                    map: map,
+                    title: 'Golden Gate Bridge'
+            });
+                var contentString = 'Content One';
+    
+                var infowindow = new google.maps.InfoWindow({
+                    content: contentString
+                });
+    
+                marker.addListener('click', function() {
+                    infowindow.open(map, marker);
+                });
+            })
+            console.log('map');
+            $(window).unbind('scroll')
+        }
   });
+});

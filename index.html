@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="css/regular.css">
     <link rel="stylesheet" href="css/solid.css">
     <link rel="stylesheet" href="css/v4-shims.css">
+    <link rel="stylesheet" href="css/twentytwenty.css">
 </head>
 
 <body>
@@ -22,7 +23,7 @@
                     <div class="container">
                         <nav class="menu_nav">
                             <a href="#" class="menu_link">main</a>
-                            <a href="#" class="menu_link">production</a>
+                            <a href="#features" class="menu_link">our benefits</a>
                             <a href="#" class="menu_link">catalogue</a>
                             <a href="#" class="menu_link">examples of works</a>
                             <a href="#" class="menu_link">fitting of images</a>
@@ -55,7 +56,7 @@
                         <a class="navbar_phone" href="tel+12345678910">+12345678910</a>
                         <a class="navbar_email navbar_small-text" href="mailto:info@mail.cu">info@mail.cu</a>
                     </div>
-                    <button class="button-o navbar_button">get a consultation</button>
+                    <a href="#offer" class="button-o navbar_button">get a consultation</a>
                     <!-- /.logo navbar_logo -->
                 </div>
             </div>
@@ -68,9 +69,7 @@
                 title
             </h1>
             <span class="hero_subtitle">subtitle</span>
-            <button class="button hero_button">
-                to order
-            </button>
+            <a href="#offer" class="button hero_button">to order</a>
            </div>
            <!-- /.container -->
         </div>
@@ -79,7 +78,7 @@
     <!-- /.header -->
 
     <main>
-        <section class="offer bg-secondary">
+        <section class="offer bg-secondary" id="offer" >
             <div class="container">
                 <div class="offer_block offer-block offer-block_calc-bg">
                     <h2 class="offer_title"> claim for settlement</h2>
@@ -88,15 +87,22 @@
                         <div class="form_row">
                             <div class="form_group">
                                 <label for="" class="form_label">type of glass</label>
-                                <input type="text" class="input form_input">
+                                <input type="hidden" name="type" id="select-type" value="with printing">
+                                <div class="select form_select">
+                                    <div class="select_checked">with printing</div>
+                                    <ul class="select_dropdown">
+                                        <li class="select_option" data-value="with printing">with printing</li>
+                                        <li class="select_option" data-value="without printing">without printing</li>
+                                    </ul>
+                                </div>
                             </div>
                             <div class="form_group">
                                 <label for="" class="form_label">width</label>
-                                <input type="text" class="input form_input form_input-width">
+                                <input type="number" class="input form_input form_input-width">
                             </div>
                             <div class="form_group">
                                 <label for="" class="form_label">height</label>
-                                <input type="text" class="input form_input">
+                                <input type="number" class="input form_input">
                             </div>
                         </div>
                         <div class="form_row form_row-checkbox">
@@ -119,7 +125,7 @@
                                 <input type="text" class="input form_input" placeholder="your name">
                             </div>
                             <div class="form_group">
-                                <input type="tel" class="input form_input form_input-phone" placeholder="your number phone">
+                                <input type="tel" class="input form_input form_input-phone" placeholder="your phone number">
                             </div>
                             <div class="form_group">
                                 <input type="submit" class="button form_button" value="get a discount">
@@ -132,7 +138,7 @@
             <!-- /.container -->
         </section>
         <!-- /.offer -->
-        <section class="features section">
+        <section class="features section" id="features">
             <div class="container">
                 <h2 class="section-title section_title">our benefits</h2>
                 <div class="features-block">
@@ -528,6 +534,44 @@
             <!-- /.container -->
         </section>
         <!-- /.section stages -->
+
+        <section class="section before">
+            <div class="container">
+                <h2 class="section-title section_title">Before and after</h2>
+                <div class="before-slider-wrap">
+                        <div class="before-slider">
+                                <div class="before-slider_item">
+                                    <div class="before-after">
+                                        <img src="img/before-slider/sample-before.png" alt="">
+                                        <img src="img/before-slider/sample-after.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="before-slider_item">
+                                        <div class="before-after">
+                                                <img src="img/before-slider/sample-before.png" alt="">
+                                                <img src="img/before-slider/sample-after.png" alt="">
+                                            </div>
+                                </div>
+                                <div class="before-slider_item">
+                                        <div class="before-after">
+                                                <img src="img/before-slider/sample-before.png" alt="">
+                                                <img src="img/before-slider/sample-after.png" alt="">
+                                            </div>
+                                </div>
+                            </div>
+                            <div class="before-slider-arrows">
+                                    <button class="arrow arrow-left">
+                                        <i class="fas fa-angle-left"></i>
+                                    </button>
+                                    <button class="arrow arrow-right">
+                                        <i class="fas fa-angle-right"></i>
+                                    </button>
+                                </div>
+                </div>
+                <!-- /.before-slider-wrap -->
+            </div>
+        </section>
+
         <section class="section reviews">
             <div class="container">
                 <h2 class="section-title section_title">
@@ -582,7 +626,7 @@
                                 <input type="text" class="input form_input" placeholder="your name">
                             </div>
                             <div class="form_group">
-                                <input type="text" class="input form_input form_input-width" placeholder="your phone number">
+                                <input type="tel" class="input form_input form_input-width" placeholder="your phone number">
                             </div>
                             <div class="form_group">
                                 <input type="text" class="input form_input" placeholder="your price">
@@ -755,6 +799,12 @@
 <script async defer
 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtCvc-dHxsnqIQDhLoT2n_qPycYMNkqcQ&callback=initMap">
 </script>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="javascript/jquery.event.move.js"></script>
+<script src="javascript/jquery.twentytwenty.js"></script>
+<script src="javascript/slick.min.js"></script>
+<script src="javascript/main.js"></script>
+<script src="javascript/jquery.maskedinput.min.js"></script>
 </body>
 
 </html>

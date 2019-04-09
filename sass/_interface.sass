@@ -40,6 +40,7 @@ img
     &-like
         background-color: $primary
         border: none
+        cursor: pointer
 
 
 .bg-secondary 
@@ -51,7 +52,43 @@ img
 input[type="checkbox"]
     display: none
     &:checked + label:before
-        background-color: green
+        background-color: $primary
+.select
+    height: 80px
+    width: 100%
+    border: 1px solid #dddddd
+    position: relative
+    &:before
+        font-family: "Font Awesome 5 Free" 
+        font-weight: 900
+        font-size: 26px
+        content: "\f107"
+        position: absolute
+        top: 50%
+        right: 20px
+        transform: translateY(-50%)
+    &:hover
+        cursor: pointer
+    &_checked
+        line-height: 80px
+        padding-left: 30px
+    &_dropdown
+        position: absolute
+        top: 80px
+        width: 100%
+        background-color: #fff
+        border: 1px solid #dddddd
+        margin: 0
+        list-style: none
+        padding: 0
+        display: none
+        &_open
+            display: block
+    &_option
+        padding: 20px
+        &:hover
+            background-color: $bg-secondary
+
 .checkbox
     &-label
         display: flex
@@ -66,8 +103,6 @@ input[type="checkbox"]
             height: 30px
             border: 1px solid #dddddd
             margin-right: 20px
-fas, fa, fab
-    color:#fff
 @media (max-width: 576px)
     .button
         font-size: 10px

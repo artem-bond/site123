@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAES,AAAD,aAAO,CAAC;EACJ,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,aAAa;EAC9B,WAAW,EAAE,MAAM;CAAG",
-    "sources": [
-        "../sass/blocks/steps.sass"
-    ],
-    "names": [],
-    "file": "steps.css"
-}
